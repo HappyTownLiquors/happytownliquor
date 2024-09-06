@@ -55,20 +55,40 @@
             overflow: hidden;
         }
 
-        .hero {
-            background: url('images/HTmain.jpg') no-repeat center center/cover;
-            color: #fff;
-            padding: 100px 0;
-            text-align: center;
-        }
 
-        .store-info {
-            background-color: #fff;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+        .hero {
+    text-align: center;            /* Centers text and image */
+    padding: 20px;                /* Adds padding around the section */
+}
+
+.hero h2 {
+    margin-bottom: 10px;          /* Space between heading and paragraph */
+}
+
+.hero p {
+    margin-bottom: 20px;          /* Space between paragraph and image */
+}
+
+.hero-image {
+    margin-bottom: 20px;          /* Space between image and store info */
+}
+
+.hero-image img {
+    max-width: 100%;              /* Ensures image scales with container */
+    height: auto;                 /* Maintains aspect ratio */
+    border-radius: 8px;           /* Optional: Adds rounded corners */
+}
+
+.store-info {
+    background-color: #fff;
+    margin-bottom: 20px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Space between store info and map */
+}
+
+.map {
+    margin: 0 auto;               /* Centers the map */
+}
+
 
         .map iframe {
             width: 100%;
@@ -145,12 +165,15 @@
             background-color: #c0392b;
         }
 
-        .product-category img {
-            width: 100%;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
 
+        .product-category img {
+    max-width: 100%;  /* Ensures the image scales down responsively */
+    height: auto;     /* Keeps the aspect ratio intact */
+    display: block;   /* Makes sure the image is treated as a block-level element */
+    margin: 0 auto;   /* Centers the image */
+    object-fit: cover;  /* Makes sure the image fits the container without stretching */
+    border-radius: 8px; /* Adds some nice rounding to the corners */
+}
         .product-category {
             margin-bottom: 30px;
         }
@@ -181,28 +204,34 @@
         </div>
     </header>
 
-    <section id="home">
-        <div class="hero">
-            <h2>Welcome to Happy Town Liquor</h2>
-            <p>Your Neighborhood Destination for Premium Liquor!</p>
-            <div class="store-info">
-                <p><strong>Address:</strong> 1552 FM 685 #105, Pflugerville, TX 78660</p>
-                <p><strong>Phone:</strong> (512) 305-3296</p>
-                <p><strong>Hours:</strong> Monday-Saturday 10AM-9PM</p>
-            </div>
-            <div class="map">
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.285367794798!2d-97.62327798421818!3d30.470516781782855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865b94e22c666333%3A0x6b6094238b7e95d6!2s1552%20FM%20685%20%23105%2C%20Pflugerville%2C%20TX%2078660!5e0!3m2!1sen!2sus!4v1693945044410!5m2!1sen!2sus" 
-        width="600" 
-        height="450" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-</div>
+    
+<section id="home">
+    <div class="hero">
+        <h2>Welcome to Happy Town Liquor</h2>
+        <p>Your Neighborhood Destination for Premium Liquor!</p>
+        <div class="hero-image">
+            <img src="images/HTmain.jpg" alt="Happy Town Liquor Store" />
         </div>
-    </section>
+        <div class="store-info">
+            <p><strong>Address:</strong> 1552 FM 685 #105, Pflugerville, TX 78660</p>
+            <p><strong>Phone:</strong> (512) 305-3296</p>
+            <p><strong>Hours:</strong> Monday-Saturday 10AM-9PM</p>
+        </div>
+        <div class="map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.285367794798!2d-97.62327798421818!3d30.470516781782855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865b94e22c666333%3A0x6b6094238b7e95d6!2s1552%20FM%20685%20%23105%2C%20Pflugerville%2C%20TX%2078660!5e0!3m2!1sen!2sus!4v1693945044410!5m2!1sen!2sus" 
+                width="400" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+
 
     <section id="about">
         <div class="container">
